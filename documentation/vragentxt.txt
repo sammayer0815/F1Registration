@@ -1,0 +1,24 @@
+hoe wil je inloggen: eigen uniek username, uniek email (school)
+registeren : windesheim email
+
+live wire voor charts: mag
+
+alleen 1 lap race aankomende race 2 weeken ervoor.
+
+hoe wil je opslaan: tijd duizenste invoeren, foto ronde.
+
+wat voor uiterlijk: 4playf1, moet f1 uitstralen
+
+goed keuren: hoeft niet 
+
+admin en/of mod: stephan en sjoen admin kunnen mod aangeven
+
+tijden updaten: alleen tijd kunnen updaten, en bij update bericht naar admin
+
+iedereen moet tijd foto kunnen zien.
+
+het moet responsive zijn chrome
+
+2 tabel, user eigen tijden en iedereen tijden
+
+chat: zelf bepalen				
