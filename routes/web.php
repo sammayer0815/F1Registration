@@ -22,6 +22,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 // profiles
-Route::get('/profiles', [ProfileController::class, 'index']);
-Route::get('/create-profile', [ProfileController::class, 'create']);
-Route::post('/profiles-store', [ProfileController::class,'store']);
+Route::resource('profiles', controller: profileController::class);

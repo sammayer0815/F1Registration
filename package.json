@@ -4,7 +4,8 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "start": "npm run dev & php artisan serve"
+        "start": "concurrently --kill-others \"npm run dev\" \"php artisan serve\""
+
     },
     "devDependencies": {
         "@popperjs/core": "^2.11.6",
