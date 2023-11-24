@@ -33,7 +33,11 @@ class ProfileController extends Controller
     public function store(StoreProfileRequest $request)
     {
         //
-        die(var_dump($_POST));
+        $request->validate([
+            'user_id'=> 'required',    
+            'firstname'=> 'required',
+            'lastname'=> 'required',
+            ]);
     }
 
     /**
@@ -42,6 +46,7 @@ class ProfileController extends Controller
     public function show(Profile $profile)
     {
         //
+        return view('profile.show', compact('profile'));
     }
 
     /**
@@ -50,6 +55,7 @@ class ProfileController extends Controller
     public function edit(Profile $profile)
     {
         //
+        return view('profile.edit', compact('profile'));
     }
 
     /**

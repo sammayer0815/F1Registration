@@ -7,7 +7,10 @@
     </div>
     <div class="offset-2 col-8">
         @foreach($profiles as $profile)
-            <p>{{$profile->firstname}}</p>
+            <p>
+                <a href="{{ route('profile.show', $profile->id) }}">
+                    {{$profile->firstname }}</a>
+            </p>
         @endforeach
     </div>
 @endsection
