@@ -9,7 +9,7 @@
     <div class="col-8 offset-2">
         <form action="{{ route('profiles.store') }}" method="post">
             @csrf
-            <input type="hidden" name="user-id" value="{{ Auth::user()->id }}">
+            <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
             <label for="firstname">First name:</label>
             <input type="text" name="firstname" />
             <label for="lastname">Last name:</label>

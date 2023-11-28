@@ -35,6 +35,9 @@
                             <li class="nav-item">
                                 <a href="{{ route('profiles.index') }}" class="nav-link">{{ __('Profiles') }}</a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{ route('profiles.create') }}" class="nav-link">{{ __('Create') }}</a>
+                            </li>
                         </ul>
 
                         <!-- Right Side Of Navbar -->

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Profile;
 use App\Http\Requests\StoreProfileRequest;
 use App\Http\Requests\UpdateProfileRequest;
+use DB;
 
 class ProfileController extends Controller
 {
@@ -37,7 +38,12 @@ class ProfileController extends Controller
             'user_id'=> 'required',    
             'firstname'=> 'required',
             'lastname'=> 'required',
-            ]);
+        ]);
+
+        Profile::create($request->all());
+
+        return redirect()->route('profiles.index')
+            ->with('succes', 'Profile created successfully.');  
     }
 
     /**
@@ -46,7 +52,7 @@ class ProfileController extends Controller
     public function show(Profile $profile)
     {
         //
-        return view('profile.show', compact('profile'));
+        return view('profiles.show', compact('profile'));
     }
 
     /**
@@ -64,6 +70,10 @@ class ProfileController extends Controller
     public function update(UpdateProfileRequest $request, Profile $profile)
     {
         //
+        $request->validate([    
+            'firstname'=> 'required',
+            'lastname'=> 'required',
+        ]);
     }
 
     /**

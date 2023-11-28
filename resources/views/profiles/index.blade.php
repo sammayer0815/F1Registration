@@ -8,9 +8,10 @@
     <div class="offset-2 col-8">
         @foreach($profiles as $profile)
             <p>
-                <a href="{{ route('profile.show', $profile->id) }}">
-                    {{$profile->firstname }}</a>
+                <a href="{{ route('profiles.show', $profile->id) }}">
+                    {{$profile->id }} {{ $profile->firstname }}</a>
             </p>
+            <a href="{{ route('profiles.edit', $profile->id) }}"></a>
         @endforeach
     </div>
 @endsection
