@@ -63,7 +63,7 @@
                                         {{ __('Login') }}
                                     </button>
                                     <!-- Forgot password link -->
-                                    <a href="/forgot-password" class="nav-link mb-4"><small>Forgot Password?</small></a>                               
+                                    <a href="/password/reset" class="nav-link mb-4"><small>Forgot Password?</small></a>                               
                                 </form>
                             </div>
                         </div>
