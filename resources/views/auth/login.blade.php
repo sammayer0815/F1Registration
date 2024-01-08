@@ -63,40 +63,44 @@
 
                             <!-- Right tab (signup form) -->
                             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
-                                <!-- Backend: form signup -->
-                                <form action="">                           
-                                    <!-- Username input -->
-                                    <label for="signup-username" class="form-label text-white">Username:</label>
-                                    <div class="mb-4 input-group">
-                                        <span class="input-group-text">
-                                            <i class="bi bi-person-fill"></i>
-                                        </span>
-                                        <input type="text" class="form-control" id="signup-username">
-                                    </div>
-        
-                                    <!-- Email input -->
-                                    <label for="signup-email" class="form-label text-white">Email address:</label>
-                                    <div class="mb-4 input-group">
-                                        <span class="input-group-text">
-                                            <i class="bi bi-envelope-fill"></i>
-                                        </span>
-                                        <input type="email" class="form-control" id="signup-email">                        
-                                    </div>
+<!-- Backend: form signup -->
+<form method="POST" action="{{ route('register') }}">                           
+    @csrf <!-- Add this line to include the CSRF token -->
 
-                                    <!-- Password input -->
-                                    <label for="signup-password" class="form-label text-white">Password:</label>
-                                    <div class="mb-5 input-group">
-                                        <span class="input-group-text">
-                                            <i class="bi bi-lock-fill"></i>
-                                        </span>
-                                        <input type="password" class="form-control" id="signup-password">
-                                    </div>
-                                            
-                                    <!-- Submit input -->
-                                    <div class="input-group mb-4">
-                                        <input type="submit" class="form-control btn btn-primary py-2 py-sm-3" value="Submit">
-                                    </div>                               
-                                </form>
+    <!-- Name input -->
+    <label for="signup-name" class="form-label text-white">Name:</label>
+    <div class="mb-4 input-group">
+        <span class="input-group-text">
+            <i class="bi bi-person-fill"></i>
+        </span>
+        <input type="text" class="form-control" id="signup-name" name="name">
+    </div>
+
+    <!-- Email input -->
+    <label for="signup-email" class="form-label text-white">Email address:</label>
+    <div class="mb-4 input-group">
+        <span class="input-group-text">
+            <i class="bi bi-envelope-fill"></i>
+        </span>
+        <input type="email" class="form-control" id="signup-email" name="email">                        
+    </div>
+
+    <!-- Password input -->
+    <label for="signup-password" class="form-label text-white">Password:</label>
+    <div class="mb-5 input-group">
+        <span class="input-group-text">
+            <i class="bi bi-lock-fill"></i>
+        </span>
+        <input type="password" class="form-control" id="signup-password" name="password">
+    </div>
+                                        
+    <!-- Submit input -->
+    <div class="input-group mb-4">
+        <input type="submit" class="form-control btn btn-primary py-2 py-sm-3" value="Submit">
+    </div>                               
+</form>
+
+
                             </div>
                         </div>
                     </div>
